@@ -2,13 +2,15 @@ package testNGHW;
 
 import org.openqa.selenium.By;
 
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+//import testNGPra.Baseclass;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DuplicateLead   {
-	public ChromeDriver driver;
+public class DuplicateLead extends BaseClass  {
+//public ChromeDriver driver;
 	
 	
 @Test
@@ -17,8 +19,8 @@ public class DuplicateLead   {
 
 	public void TC3DlicateLead() throws InterruptedException {
 		// TODO Auto-generated method stub
-
-	
+	driver.findElement(By.linkText("CRM/SFA")).click();
+	//ChromeDriver driver = new ChromeDriver();
 	driver.findElement(By.linkText("Leads")).click();
 	driver.findElement(By.linkText("Find Leads")).click();
 	driver.findElement(By.xpath("//span[text()='Phone']")).click();

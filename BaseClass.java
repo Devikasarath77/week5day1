@@ -4,16 +4,16 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	
 	public ChromeDriver driver;
-	@Test 
+	
 	@BeforeMethod
 	public void precondition() {
 		
@@ -26,12 +26,12 @@ public class BaseClass {
 		driver.findElement(By.id("password")).sendKeys("crmsfa");
 		driver.findElement(By.className("decorativeSubmit")).click();
 		
-		driver.findElement(By.linkText("CRM/SFA")).click();
+		
 	}
 	
-//@AfterMethod
-//public void postcondition () {
-//	
-//	driver.close();
-//}
+@AfterMethod
+public void postcondition () {
+	
+	driver.close();
+}
 }

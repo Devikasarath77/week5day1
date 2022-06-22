@@ -4,22 +4,24 @@ package testNGHW;
 
 import org.openqa.selenium.By;
 
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.annotations.Test;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CreateLead {
-	
-	public ChromeDriver driver;
+//import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class CreateLead extends BaseClass{
+//		public ChromeDriver driver;
 	@Test
 	public void TC1createlead() throws InterruptedException {
 		// TODO Auto-generated method stub
-		
-		
+	//	ChromeDriver driver = new ChromeDriver();
+		driver.findElement(By.linkText("CRM/SFA")).click();
+
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Create Lead")).click();
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf");

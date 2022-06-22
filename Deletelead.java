@@ -4,15 +4,15 @@ package testNGHW;
 
 import org.openqa.selenium.By;
 
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
-import testNGPra.Baseclass;
+//import testNGPra.Baseclass;
 
-public class Deletelead  extends Baseclass{
+public class Deletelead  extends BaseClass{
 	
-	public ChromeDriver driver;
+//	public ChromeDriver driver;
 	@Test
 	
 
@@ -26,7 +26,7 @@ public class Deletelead  extends Baseclass{
 //			driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 //			driver.findElement(By.id("password")).sendKeys("crmsfa");
 //			driver.findElement(By.className("decorativeSubmit")).click();
-//			driver.findElement(By.linkText("CRM/SFA")).click();
+			driver.findElement(By.linkText("CRM/SFA")).click();
 			driver.findElement(By.linkText("Leads")).click();
 			driver.findElement(By.linkText("Find Leads")).click();
 			driver.findElement(By.xpath("//span[text()='Phone']")).click();
