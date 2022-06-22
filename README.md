@@ -33,4 +33,32 @@ parallel- if there are 2-3 testcase then it run parallely execute in browser at 
    failed tested cases are executed from test-output folder- failed.xml file 
 - we can add the failed methods( in real time signle class  with mutliple methods are used and so that we can execute the failed methods alone via failed test .xml file 
 
+## seq multiple cases execution xml file 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+    <class name="testNGHW.CreateLead"/>
+      <class name="testNGHW.Deletelead"/>
+      <class name="testNGHW.DuplicateLead"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+----- while creating a base class and running with other different class
+chormedriver- object creationg 
+driver is used as public variable 
+
+public ChromeDriver driver;
+	
+	## notes
+@BeforeMethod
+	public void precondition() {
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 ## still more need to be updated 
